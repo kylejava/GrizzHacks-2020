@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 onPressed: () {
                   Navigator.pushNamed(context, '/elementlist');
                 },
-                icon: Icon(Icons.edit),
+                icon: Icon(Icons.library_books),
                 label: Text('Learn'),
             )
           ],
