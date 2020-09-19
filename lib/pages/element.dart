@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flip_card/flip_card.dart';
+
 
 class ElementPage extends StatefulWidget {
   @override
@@ -6,9 +8,65 @@ class ElementPage extends StatefulWidget {
 }
 
 class _ElementPageState extends State<ElementPage> {
-  Map ElementInfo = {};
+  Map elementInfo = {};
+
+
+
+  Widget front(){
+    return Padding(
+      padding: EdgeInsets.fromLTRB(30.0, 60.0, 30.0, 60.0),
+      child: Container(
+        color: Colors.blue,
+
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                elementInfo['atomicNumber'].toString(),
+              ),
+              SizedBox(height: 50.0),
+              Text(
+                elementInfo['symbolOfElement']
+              ),
+              SizedBox(height: 15.0),
+              Text(
+                  elementInfo['nameOfElement']
+              ),
+              SizedBox(height: 100.0),
+              Text(
+                  elementInfo['atomicMass']
+              ),
+
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget back(){
+    return Padding(
+      padding: EdgeInsets.fromLTRB(30.0, 60.0, 30.0, 60.0),
+      child: Container(
+
+        color: Colors.blue,
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('BACK SIDE'),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+
   @override
   Widget build(BuildContext context) {
+    elementInfo = ModalRoute.of(context).settings.arguments;
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -20,15 +78,10 @@ class _ElementPageState extends State<ElementPage> {
         backgroundColor: Colors.black,
         centerTitle: true,
       ),
-      body: Card(
-        margin: EdgeInsets.fromLTRB(50.0, 100.0, 50.0, 100.0),
-        
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Test'),
-          ],
-        ),
+      body: FlipCard(
+        direction: FlipDirection.HORIZONTAL, // default
+        front: front(),
+        back: back(),
       ),
     );
   }

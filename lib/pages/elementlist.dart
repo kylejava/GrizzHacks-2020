@@ -20,20 +20,22 @@ class _ElementListState extends State<ElementList> {
         centerTitle: true,
       ),
       body: ListView.builder(
-          itemCount: ElementNames.length,
+          itemCount: elementNames.length,
         itemBuilder: (context , index){
             return ListTile(
 
               title: Text(
 
-                '${ElementNames[index]['name']} \(${ElementNames[index]['symbol']}\)',
+                '${elementNames[index]['name']} \(${elementNames[index]['symbol']}\)',
 
               ),
               onTap: (){
                 Navigator.pushNamed(context, '/element' , arguments: {
                   'index': index,
-                  'nameOfElement' : ElementNames[index]['name'],
-                  'symbolOfElement': ElementNames[index]['symbol'],
+                  'nameOfElement' : elementNames[index]['name'],
+                  'symbolOfElement': elementNames[index]['symbol'],
+                  'atomicNumber' : elementNames[index]['atomicNumber'],
+                  'atomicMass': elementNames[index]['atomicMass'],
                 });
               },
             );
