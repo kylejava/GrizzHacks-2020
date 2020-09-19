@@ -40,7 +40,8 @@ class _ElementListState extends State<ElementList> {
                   'atomicMass': elementNames[index]['atomicMass'],
                   'groupBlock': elementNames[index]['groupBlock'],
                   'state': elementNames[index]['standardState'],
-
+                  'bondingType': elementNames[index]['bondingType'],
+                  'year': elementNames[index]['yearDiscovered'],
                 });
               },
             );

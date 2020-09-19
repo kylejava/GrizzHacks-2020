@@ -67,7 +67,12 @@ class _ElementPageState extends State<ElementPage> {
                   ),
                 ),
               ),
-              Divider(color: Colors.black,),
+              Divider(
+                color: Colors.black,
+                indent: 20.0,
+                endIndent: 20.0,
+                thickness: 3.0,
+              ),
               SizedBox(height: 50.0),
               Row( //ATOMIC NUMBER ROW
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -117,7 +122,7 @@ class _ElementPageState extends State<ElementPage> {
                 ],
               ),
               SizedBox(height: 20.0),
-              Row( // GROUP ROW
+              Row( // STANDARD STATE ROW
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
@@ -128,7 +133,32 @@ class _ElementPageState extends State<ElementPage> {
                   ),
                 ],
               ),
+              SizedBox(height: 20.0),
+              Row( // BONDING TYPE STATE
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    'BONDING TYPE:    ',
+                  ),
+                  Text(
+                    elementInfo['bondingType'],
+                  ),
+                ],
 
+              ),
+              Expanded(
+                child: Align(
+                  alignment: FractionalOffset.bottomCenter,
+                  child: Text(
+                    'Discovered in ' + elementInfo['year'].toString(),
+                    style: TextStyle(
+                      fontStyle: FontStyle.italic,
+                      fontSize: 15.0,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 25.0),
             ],
           ),
         ),
