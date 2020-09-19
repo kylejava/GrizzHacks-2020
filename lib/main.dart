@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:elementivate/pages/element.dart';
-import 'package:elementivate/pages/elementlist.dart';
+import 'file:///C:/Users/Kyle/Desktop/grizzhacks-2020/elementivate/lib/pages/learn/element.dart';
+import 'file:///C:/Users/Kyle/Desktop/grizzhacks-2020/elementivate/lib/pages/learn/elementlist.dart';
 import 'package:elementivate/pages/home.dart';
 void main() {
   runApp(MyApp());

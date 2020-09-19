@@ -11,7 +11,6 @@ class _ElementPageState extends State<ElementPage> {
   Map elementInfo = {};
 
 
-
   Widget front(){
     return Padding(
       padding: EdgeInsets.fromLTRB(30.0, 60.0, 30.0, 60.0),
@@ -22,20 +21,45 @@ class _ElementPageState extends State<ElementPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                elementInfo['atomicNumber'].toString(),
+              SizedBox(height: 10.0),
+              Align(
+
+                alignment: FractionalOffset.topCenter,
+                child: Text(
+                  elementInfo['atomicNumber'].toString(),
+                  style: TextStyle(
+                      fontSize: 50.0,
+                    fontFamily: 'Helvetica'
+                  ),
+                ),
               ),
               SizedBox(height: 50.0),
               Text(
-                elementInfo['symbolOfElement']
+                elementInfo['symbolOfElement'],
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 150.0,
+                    fontFamily: 'Helvetica'
+                ),
+
               ),
               SizedBox(height: 15.0),
               Text(
-                  elementInfo['nameOfElement']
+                  elementInfo['nameOfElement'],
+                style: TextStyle(
+                    fontSize: 50.0,
+                    fontFamily: 'Helvetica'
+                ),
+
               ),
-              SizedBox(height: 100.0),
+              SizedBox(height: 120.0),
               Text(
-                  elementInfo['atomicMass']
+                  elementInfo['atomicMass'],
+                style: TextStyle(
+                    fontSize: 50.0,
+                    fontFamily: 'Helvetica'
+                ),
+
               ),
 
             ],
@@ -64,6 +88,7 @@ class _ElementPageState extends State<ElementPage> {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 35.0,
+                    fontFamily: 'Helvetica',
                   ),
                 ),
               ),
@@ -79,9 +104,19 @@ class _ElementPageState extends State<ElementPage> {
                 children: [
                   Text(
                     'ATOMIC NUMBER:    ',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25.0,
+                      fontFamily: 'Helvetica',
+                    ),
                   ),
                   Text(
                     elementInfo['atomicNumber'].toString(),
+                    style: TextStyle(
+
+                      fontSize: 22.0,
+                      fontFamily: 'Helvetica',
+                    ),
                   ),
                 ],
               ),
@@ -91,9 +126,19 @@ class _ElementPageState extends State<ElementPage> {
                 children: [
                   Text(
                     'SYMBOL:    ',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25.0,
+                      fontFamily: 'Helvetica',
+                    ),
                   ),
                   Text(
                     elementInfo['symbolOfElement'],
+                    style: TextStyle(
+
+                      fontSize: 22.0,
+                      fontFamily: 'Helvetica',
+                    ),
                   ),
                 ],
               ),
@@ -103,9 +148,18 @@ class _ElementPageState extends State<ElementPage> {
                 children: [
                   Text(
                     'ATOMIC MASS:    ',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25.0,
+                      fontFamily: 'Helvetica',
+                    ),
                   ),
                   Text(
                     elementInfo['atomicMass'],
+                    style: TextStyle(
+                      fontSize: 22.0,
+                      fontFamily: 'Helvetica',
+                    ),
                   ),
                 ],
               ),
@@ -115,9 +169,19 @@ class _ElementPageState extends State<ElementPage> {
                 children: [
                   Text(
                     'GROUP:    ',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25.0,
+                      fontFamily: 'Helvetica',
+                    ),
                   ),
                   Text(
                     elementInfo['groupBlock'],
+                    style: TextStyle(
+
+                      fontSize: 22.0,
+                      fontFamily: 'Helvetica',
+                    ),
                   ),
                 ],
               ),
@@ -127,9 +191,19 @@ class _ElementPageState extends State<ElementPage> {
                 children: [
                   Text(
                     'STANDARD STATE:    ',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25.0,
+                      fontFamily: 'Helvetica',
+                    ),
                   ),
                   Text(
                     elementInfo['state'],
+                    style: TextStyle(
+
+                      fontSize: 22.0,
+                      fontFamily: 'Helvetica',
+                    ),
                   ),
                 ],
               ),
@@ -139,9 +213,19 @@ class _ElementPageState extends State<ElementPage> {
                 children: [
                   Text(
                     'BONDING TYPE:    ',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25.0,
+                      fontFamily: 'Helvetica',
+                    ),
                   ),
                   Text(
                     elementInfo['bondingType'],
+                    style: TextStyle(
+
+                      fontSize: 22.0,
+                      fontFamily: 'Helvetica',
+                    ),
                   ),
                 ],
 
@@ -152,6 +236,7 @@ class _ElementPageState extends State<ElementPage> {
                   child: Text(
                     'Discovered in ' + elementInfo['year'].toString(),
                     style: TextStyle(
+
                       fontStyle: FontStyle.italic,
                       fontSize: 15.0,
                     ),
