@@ -27,7 +27,9 @@ class _ElementListState extends State<ElementList> {
               title: Text(
 
                 '${elementNames[index]['name']} \(${elementNames[index]['symbol']}\)',
-
+                style: TextStyle(
+                  fontSize: 25.0
+                ),
               ),
               onTap: (){
                 Navigator.pushNamed(context, '/element' , arguments: {
@@ -36,6 +38,9 @@ class _ElementListState extends State<ElementList> {
                   'symbolOfElement': elementNames[index]['symbol'],
                   'atomicNumber' : elementNames[index]['atomicNumber'],
                   'atomicMass': elementNames[index]['atomicMass'],
+                  'groupBlock': elementNames[index]['groupBlock'],
+                  'state': elementNames[index]['standardState'],
+
                 });
               },
             );
