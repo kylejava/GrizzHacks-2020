@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               FlatButton.icon(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/elementlist');
+                  Navigator.pushNamed(context, '/activitylist');
                 },
                 label: Text('Practice'),
                 icon: Icon(Icons.edit),

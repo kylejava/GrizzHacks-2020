@@ -26,7 +26,7 @@ class _ElementListState extends State<ElementList> {
 
               title: Text(
 
-                '${elementNames[index]['name']} \(${elementNames[index]['symbol']}\)',
+                '${elementNames[index]['atomicNumber']}  ${elementNames[index]['name']} \(${elementNames[index]['symbol']}\)',
                 style: TextStyle(
                   fontSize: 25.0
                 ),

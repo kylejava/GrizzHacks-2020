@@ -10,12 +10,38 @@ class ElementPage extends StatefulWidget {
 class _ElementPageState extends State<ElementPage> {
   Map elementInfo = {};
 
+  Color selectColor(){
+    if(elementInfo['groupBlock'] == 'nonmetal'){
+      return Color(0xFF8ced8c);
+    }
+    else if(elementInfo['groupBlock'] == 'noble gas'){
+      return Color(0xFFe5bde5);
+    }
+    else if(elementInfo['groupBlock'] == 'alkali metal'){
+      return Color(0xFFeace5d);
+    }
+    else if(elementInfo['groupBlock'] == 'alkaline earth metal'){
+      return Color(0xFFf1f165);
+    }
+    else if(elementInfo['groupBlock'] == 'transition metal'){
+      return Color(0xFFf0bcbc);
+    }
+    else if(elementInfo['groupBlock'] == 'actinoid'){
+      return Color(0xFFfaccdb);
+    }
+    else if(elementInfo['groupBlock'] == 'lanthanoid'){
+      return Color(0xFFf6d4a2);
+    }
+    else if(elementInfo['groupBlock'] == 'metal' ||elementInfo['groupBlock'] == 'metalloid' || elementInfo['groupBlock'] == 'post-transition metal'  ){
+      return Color(0xFF9ee5d4);
+    }
+  }
 
   Widget front(){
     return Padding(
       padding: EdgeInsets.fromLTRB(30.0, 60.0, 30.0, 60.0),
       child: Container(
-        color: Colors.blue,
+        color: selectColor(),
 
         child: Center(
           child: Column(
@@ -74,7 +100,7 @@ class _ElementPageState extends State<ElementPage> {
       padding: EdgeInsets.fromLTRB(30.0, 60.0, 30.0, 60.0),
       child: Container(
 
-        color: Colors.blue,
+        color: selectColor(),
         child: Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
