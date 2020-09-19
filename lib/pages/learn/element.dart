@@ -69,7 +69,7 @@ class _ElementPageState extends State<ElementPage> {
                 ),
 
               ),
-              SizedBox(height: 15.0),
+              SizedBox(height: 10.0),
               Text(
                   elementInfo['nameOfElement'],
                 style: TextStyle(

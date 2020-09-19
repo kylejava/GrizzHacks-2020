@@ -3,6 +3,7 @@ import 'file:///C:/Users/Kyle/Desktop/grizzhacks-2020/elementivate/lib/pages/lea
 import 'file:///C:/Users/Kyle/Desktop/grizzhacks-2020/elementivate/lib/pages/learn/elementlist.dart';
 import 'package:elementivate/pages/home.dart';
 import 'package:elementivate/pages/practice/selectActivity.dart';
+import 'package:elementivate/pages/practice/correctName.dart';
 void main() {
   runApp(MyApp());
 }
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         '/elementlist': (context) => ElementList(),
         '/element': (context) => ElementPage(),
         '/activitylist' : (context) => ActivityList(),
+        '/correctname': (context) => CorrectName(),
       },
     );
   }
