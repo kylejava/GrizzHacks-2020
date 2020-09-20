@@ -22,7 +22,8 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               Image.asset(
                   'assets/logo.png',
-                    height: 300,
+                    height: 350,
+                width: 1000,
                 fit: BoxFit.fitWidth,
               ),
               SizedBox(
