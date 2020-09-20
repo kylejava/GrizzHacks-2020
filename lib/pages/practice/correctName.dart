@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:elementivate/data.dart';
 //After the user selects which activity they want to play, this page will give random elements that the user has to type the correct name of the element
@@ -8,12 +9,19 @@ class CorrectName extends StatefulWidget {
 }
 
 class _CorrectNameState extends State<CorrectName> {
-  var _index = 36;
+  final _controller = TextEditingController();
+  var _index = 0;
+  var _numberUserIsOn = 1;
+  var _numberOfElements = elementNames.length-1;
 
-  Widget singleElement(_index){
-    print(_index);
+  void dispose(){
+    _controller.dispose();
+    super.dispose();
+  }
+
+  Widget _singleElement(){
       return Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 60.0, 30.0, 300.0),
+        padding: EdgeInsets.fromLTRB(30.0, 5.0, 30.0,0.0),
         child: Container(
           color: Colors.black,
           child: Center(
@@ -66,7 +74,80 @@ class _CorrectNameState extends State<CorrectName> {
         backgroundColor: Colors.black,
         centerTitle: true,
       ),
-      body: singleElement(_index),
+      body: Column(
+        children: [
+          SizedBox(height: 10.0),
+          Text(
+            '$_numberUserIsOn/$_numberOfElements ',
+            style: TextStyle(
+              fontSize: 30.0,
+              fontWeight: FontWeight.bold
+            ),
+          ),
+          _singleElement(),
+          SizedBox(height: 5.0),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Container(
+                padding: EdgeInsets.fromLTRB(30.0, 0.0, 0.0, 0.0),
+                width: 270.0,
+                child: TextFormField(
+                  controller: _controller,
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+             SizedBox(
+               height: 60.0,
+               child:  FlatButton.icon(
+                   color: Colors.grey,
+                   onPressed: (){
+                     if(_controller.text == elementNames[_index]['name']){
+                       if(_numberUserIsOn == _numberOfElements){
+                         AlertDialog(
+                           title: Text('You have finished!'),
+                           content: Text('Redirecting back to the select screen.'),
+                           actions: [
+                             FlatButton(
+                               child: Text('OK'),
+                               onPressed: () {},
+                             ),
+                           ],
+                         );
+                       }
+                       else{
+                         _numberUserIsOn = _numberUserIsOn + 1;
+                         _index = _index + 1;
+                         _controller.clear();
+                         setState(() {
+                           _singleElement();
+                         });
+                       }
+                     }
+                     else{
+                       showDialog(
+                         context: context,
+                         builder: (BuildContext context) {
+                           return AlertDialog(
+                             title: Text('Incorrect Element.'),
+                             content: Text('Please Try Again.'),
+                           );
+                         },
+                       );
+                     }
+                   },
+                   icon: Icon(Icons.subdirectory_arrow_right),
+                   label: Text(
+                       'Enter'
+                   )
+               ),
+
+             ),
+
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
