@@ -9,7 +9,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+
       body: Padding(
         padding: EdgeInsets.all(30.0),
 
@@ -20,15 +20,13 @@ class _HomeScreenState extends State<HomeScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(
-                  'Elementovate',
-                style: TextStyle(
-                  fontSize: 50.0,
-                  color: Colors.white,
-                ),
+              Image.asset(
+                  'assets/logo.png',
+                    height: 300,
+                
               ),
               SizedBox(
-                height: 100.0,
+                height: 50.0,
               ),
               FlatButton.icon(
                 onPressed: () {

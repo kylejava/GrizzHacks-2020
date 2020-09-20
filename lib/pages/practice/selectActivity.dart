@@ -25,7 +25,7 @@ class ActivityList extends StatelessWidget {
                 children: [
                   ListTile(
                     title: Text(
-                        'Which Element is This?',
+                        'What Element Is This?',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 25.0,
@@ -44,7 +44,12 @@ class ActivityList extends StatelessWidget {
                   ButtonBar(
                     children: [
                       FlatButton(
-                        child: Text('Practice'),
+                        child: Text(
+                          'Practice',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                          ),
+                        ),
                         onPressed: () {
                           Navigator.pushNamed(context, '/correctname');
                         },
@@ -63,7 +68,7 @@ class ActivityList extends StatelessWidget {
                 children: [
                   ListTile(
                     title: Text(
-                      'Which Group Does This Element Belong To?',
+                      'Which Group Contains This Element?',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize:25.0,
@@ -83,9 +88,14 @@ class ActivityList extends StatelessWidget {
                   ButtonBar(
                     children: [
                       FlatButton(
-                        child: Text('Practice'),
+                        child: Text(
+                            'Practice',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                          ),
+                        ),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/correctname');
+                          Navigator.pushNamed(context, '/correctgroup');
                         },
                       ),
                     ],
@@ -123,9 +133,16 @@ class ActivityList extends StatelessWidget {
                   ButtonBar(
                     children: [
                       FlatButton(
-                        child: Text('Practice'),
+
+                        child: Text(
+                            'Practice',
+                          style: TextStyle(
+                            fontSize: 20.0,
+
+                          ),
+                        ),
                         onPressed: () {
-                         // Navigator.pushNamed(context, '/correctname');
+                          Navigator.pushNamed(context, '/correctstate');
                         },
                       ),
                     ],

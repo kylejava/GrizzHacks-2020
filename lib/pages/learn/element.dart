@@ -32,7 +32,7 @@ class _ElementPageState extends State<ElementPage> {
     else if(elementInfo['groupBlock'] == 'lanthanoid'){
       return Color(0xFFf6d4a2);
     }
-    else if(elementInfo['groupBlock'] == 'metal' ||elementInfo['groupBlock'] == 'metalloid' || elementInfo['groupBlock'] == 'post-transition metal'  ){
+    else{
       return Color(0xFF9ee5d4);
     }
   }

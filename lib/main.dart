@@ -1,3 +1,5 @@
+import 'package:elementivate/pages/practice/correctGroup.dart';
+import 'package:elementivate/pages/practice/correctState.dart';
 import 'package:flutter/material.dart';
 import 'file:///C:/Users/Kyle/Desktop/grizzhacks-2020/elementivate/lib/pages/learn/element.dart';
 import 'file:///C:/Users/Kyle/Desktop/grizzhacks-2020/elementivate/lib/pages/learn/elementlist.dart';
@@ -19,6 +21,8 @@ class MyApp extends StatelessWidget {
         '/element': (context) => ElementPage(),
         '/activitylist' : (context) => ActivityList(),
         '/correctname': (context) => CorrectName(),
+        '/correctgroup': (context) => CorrectGroup(),
+        '/correctstate' : (context) => CorrectState(),
       },
     );
   }
