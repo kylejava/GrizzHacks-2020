@@ -6,7 +6,7 @@ Mobile application that helps students gain more use out of the periodic table
 - Flutter
 - Android Studio
 
-## services
+## Services
 flip_card 0.4.4
 - Link: https://pub.dev/packages/flip_card
 
