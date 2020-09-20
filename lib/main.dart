@@ -6,6 +6,7 @@ import 'file:///C:/Users/Kyle/Desktop/grizzhacks-2020/elementivate/lib/pages/lea
 import 'package:elementivate/pages/home.dart';
 import 'package:elementivate/pages/practice/selectActivity.dart';
 import 'package:elementivate/pages/practice/correctName.dart';
+import 'package:elementivate/pages/info/information.dart';
 void main() {
   runApp(MyApp());
 }
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         '/correctname': (context) => CorrectName(),
         '/correctgroup': (context) => CorrectGroup(),
         '/correctstate' : (context) => CorrectState(),
+        '/information' : (context) => Information(),
       },
     );
   }
