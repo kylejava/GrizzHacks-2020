@@ -42,6 +42,7 @@ class _ElementListState extends State<ElementList> {
                   'state': elementNames[index]['standardState'],
                   'bondingType': elementNames[index]['bondingType'],
                   'year': elementNames[index]['yearDiscovered'],
+                  'electronegativity': elementNames[index]['electronegativity'],
                 });
               },
             );

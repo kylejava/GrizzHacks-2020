@@ -41,8 +41,8 @@ class _ElementPageState extends State<ElementPage> {
     return Padding(
       padding: EdgeInsets.fromLTRB(30.0, 60.0, 30.0, 60.0),
       child: Container(
-        color: selectColor(),
 
+        color: selectColor(),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -101,7 +101,7 @@ class _ElementPageState extends State<ElementPage> {
       child: Container(
 
         color: selectColor(),
-        child: Container(
+        child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -127,6 +127,7 @@ class _ElementPageState extends State<ElementPage> {
               SizedBox(height: 50.0),
               Row( //ATOMIC NUMBER ROW
                 mainAxisAlignment: MainAxisAlignment.start,
+
                 children: [
                   Text(
                     'ATOMIC NUMBER:    ',
@@ -256,6 +257,7 @@ class _ElementPageState extends State<ElementPage> {
                 ],
 
               ),
+
               Expanded(
                 child: Align(
                   alignment: FractionalOffset.bottomCenter,
